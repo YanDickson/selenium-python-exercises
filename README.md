@@ -25,4 +25,4 @@ For Web UI testing, you will need to install the latest versions of
 
 You will also need to install the latest version of the WebDriver executable for Chrome: [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/).
 
-To verify thesetup was successful, run the command `python3 -m pipenv run pytest tests/test_selenium.py`.
+To verify the setup was successful, run the command `python3 -m pipenv run pytest tests/test_selenium.py`.
