@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 pytest = "*"
-selenium = "*"
 pytest-html-reporter = "*"
+selenium = "*"
 
 [dev-packages]
 
