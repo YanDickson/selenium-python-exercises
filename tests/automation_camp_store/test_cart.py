@@ -1,7 +1,7 @@
 from pages.cart_page import CartPage
 from pages.product_details_page import ProductDetailsPage
 
-def test_page(browser):
+def test_checkout(browser):
   cart_page = CartPage(browser)
   product_details_page = ProductDetailsPage(browser)
 

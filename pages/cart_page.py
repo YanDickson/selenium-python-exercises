@@ -20,6 +20,9 @@ class CartPage:
   def email_field(self):
     return self.browser.find_element(By.NAME, 'email')
 
+  def street_address(self):
+    return self.browser.find_element(By.NAME, 'address1')
+
   def city_field(self):
     return self.browser.find_element(By.NAME, 'city')
 
@@ -59,6 +62,7 @@ class CartPage:
     # Fill and send billing information
     self.name_field().send_keys('Test User')
     self.email_field().send_keys('test505@yopmail.com')
+    self.street_address().send_keys('123 Test Street')
     self.city_field().send_keys('Chicago')
     self.country_field().send_keys('United States', Keys.ENTER)
     self.state_field().send_keys('Illinois', Keys.ENTER)
