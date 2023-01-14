@@ -1,5 +1,5 @@
-from pages.cart_page import CartPage
-from pages.product_details_page import ProductDetailsPage
+from pages.camp_store.cart_page import CartPage
+from pages.camp_store.product_details_page import ProductDetailsPage
 
 def test_checkout(browser):
   cart_page = CartPage(browser)

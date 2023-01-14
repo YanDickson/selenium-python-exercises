@@ -24,6 +24,6 @@ class ProductsPage:
     return self.browser.find_elements(By.CLASS_NAME, 'css-1n64n71')
 
   # PAGE METHODS
-  def select_category_value(self, value):
+  def select_category_text(self, text):
     list = Select(self.category_dropdown())
-    list.select_by_value(value)
+    list.select_by_visible_text(text)

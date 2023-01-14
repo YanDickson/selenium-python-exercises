@@ -1,24 +1,23 @@
-from pages.products_page import ProductsPage
-import pytest
+from pages.camp_store.products_page import ProductsPage
 
-@pytest.mark.parametrize('value, category', [('shoes', 'shoes'), ('pant', 'pants'), ('couch', 'couch')])
-def test_category_filter(browser, value, category):
+laptop_select_text = 'Laptops'
+search_phrase = 'pants'
+
+def test_filter_by_laptops(browser):
   products_page = ProductsPage(browser)
 
   # Given the user is on the product page
   browser.get(products_page.url)
 
   # When the user selects a category
-  products_page.select_category_value(value)
+  products_page.select_category_text(laptop_select_text)
 
   # Then the results should be of the selected category
-  for element in products_page.product_categories() :
-    text = element.text
-    assert text == category
+  for category in products_page.product_categories() :
+    text = category.text
+    assert text == 'laptop'
 
-
-@pytest.mark.parametrize('search_phrase', ['pants', 'laptop', 'shoe'])
-def test_search_for_products(browser, search_phrase):
+def test_search_for_products(browser):
   products_page = ProductsPage(browser)
   
   # Given teh user is on the products page
@@ -29,5 +28,5 @@ def test_search_for_products(browser, search_phrase):
 
   # Then the item names in the results should contain the search phrase
   for item in products_page.product_name_list():
-    assert search_phrase in (item.text).lower()
+    assert search_phrase in (item.text).lower() 
     

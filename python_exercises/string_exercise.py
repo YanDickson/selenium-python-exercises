@@ -9,10 +9,6 @@ zip_code = "60611"
 my_address_list = my_address.split(', ')
 print(my_address_list)
 
-# Convert the address to all caps and assign this result to a new string
-my_capitalized_add = my_address.upper()
-print(my_capitalized_add)
-
 # Given a second string, zip_code = "60611", 
 # use all methods of concatenation from the slides to make 
 # the string "817 Joy Ridge Avenue, Northbrook, IL, 60611"
