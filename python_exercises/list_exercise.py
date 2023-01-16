@@ -16,10 +16,6 @@ print(my_count)
 fruits.remove("apple")
 print(fruits)
 
-# Get the second to fourth elements of the list and assign this sublist to a variable
-elements = fruits[1:4]
-print(elements)
-
 # Iterate through the list and convert each item to uppercase
 for fruit in fruits:
   _fruit = fruit.upper()

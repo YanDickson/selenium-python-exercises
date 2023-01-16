@@ -21,6 +21,7 @@ full_address1 = '{}, {}'.format(my_address, zip_code)
 
 # Using f-string
 full_address2 = f'{my_address}, {zip_code}'
+
 print(full_address0)
 print(full_address1)
 print(full_address2)
